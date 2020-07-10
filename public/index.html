@@ -7,13 +7,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <title>你好,微信！</title>
+  <!-- 阿里字体库 -->
+  <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1935809_2u9l0ems6pp.css" />
   <script>
     window.addEventListener('resize', (() => {
       // 基准大小
       const baseSize = 112.5
       // 设置 rem 函数
       function setRem() {
-        // 当前页面宽度相对于 750 宽的缩放比例，可根据自己需要修改。
+        // 当前页面宽度相对于 1125 宽的缩放比例，可根据自己需要修改。
         const scale = document.documentElement.clientWidth / 1125
         // 设置页面根节点字体大小
         document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px'

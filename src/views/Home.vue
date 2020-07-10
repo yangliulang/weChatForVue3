@@ -10,5 +10,7 @@ export default {
 <style lang="less" scoped>
 .home {
   font-size: @font-size;
+  height: 215px;
+  background-color: red;
 }
 </style>
