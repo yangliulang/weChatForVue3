@@ -18,13 +18,13 @@ body,
 }
 
 .fade-enter-active {
-  transition: all 2s ease-in;
+  transition: all 20s ease-in;
 }
 
 .fade-leave-from {
 }
 .fade-leave-active {
-  transition: all 2s ease-in;
+  transition: all 20s ease-in;
 }
 
 .fade-leave-to {
