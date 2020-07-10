@@ -15,7 +15,7 @@
 import { useRouter, useRoute } from "vue-router";
 import { toRef } from "vue";
 export default {
-  name: "NavToolBar",
+  name: "NavToolBarComp",
   props: {
     navs: Array
   },
@@ -41,7 +41,9 @@ export default {
 <style lang="less" scoped>
 .nav-bar {
   .flex(flex-start, stretch);
-  padding-bottom: 30px;
+
+  border-top: 0.5px solid @borderColor; /*no*/
+  padding-bottom: @navToolBarPaddingBottom;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -58,6 +60,7 @@ export default {
       font-size: @fontSizeSmall;
       font-weight: bold;
       &::before {
+        font-weight: normal;
         font-size: 70px;
       }
       &.actived {

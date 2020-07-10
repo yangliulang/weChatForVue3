@@ -1,3 +1,3 @@
 <template>
-  <div>我</div>
+  <div class="page">我</div>
 </template>

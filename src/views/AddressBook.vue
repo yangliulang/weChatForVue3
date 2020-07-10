@@ -1,3 +1,3 @@
 <template>
-  <div>通讯录</div>
+  <div class="page">通讯录</div>
 </template>

@@ -1,3 +1,3 @@
 <template>
-  <div>发现</div>
+  <div class="page">发现</div>
 </template>

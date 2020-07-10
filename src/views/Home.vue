@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <router-view class="page"></router-view>
+    <router-view></router-view>
     <!-- 导航工具栏 -->
     <NavToolBar :navs="navs" />
   </div>
@@ -24,4 +24,11 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.home {
+  .page {
+    font-size: @fontSizeLarge;
+    min-height: calc(100vh - @navToolBarHeight - @navToolBarPaddingBottom);
+  }
+}
+</style>
