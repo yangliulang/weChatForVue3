@@ -13,4 +13,4 @@ import "mobile-reset.css";
 createApp(App)
   .use(router)
   .use(store)
-  .mount("#wechat");
+  .mount("#app");
