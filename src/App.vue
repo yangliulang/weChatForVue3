@@ -2,4 +2,9 @@
   <router-view />
 </template>
 <script></script>
-<style lang="less"></style>
+<style lang="less">
+html,
+body {
+  min-height: 100vh;
+}
+</style>
