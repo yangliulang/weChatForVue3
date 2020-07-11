@@ -20,6 +20,5 @@ export const getTranstionPageTypeByRoutePath = function getTranstionPageTypeByRo
     }
   }
 
-  console.log("type", type);
   return type;
 };

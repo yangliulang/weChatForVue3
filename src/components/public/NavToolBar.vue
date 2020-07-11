@@ -44,8 +44,7 @@ export default {
 
   border-top: 0.5px solid @borderColor; /*no*/
   padding-bottom: @navToolBarPaddingBottom;
-  position: fixed;
-  width: 100%;
+  position: sticky;
   bottom: 0;
   height: @navToolBarHeight;
   background-color: @navToolBarBgColor;

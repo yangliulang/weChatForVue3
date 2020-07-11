@@ -42,7 +42,8 @@ export default {
 html,
 body,
 #app {
-  perspective: 800px;
+  // perspective: 800px;
+  font-size: @fontSizeLarge;
   min-height: 100vh;
   background-color: @appBgColor;
 }
