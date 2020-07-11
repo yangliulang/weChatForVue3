@@ -1,7 +1,7 @@
 <template>
   <router-view v-slot="{ Component }">
     <transition :name="_transtionPageType" @after-leave="onPageLeaved">
-      <component :is="Component" ref="transtionPage"></component>
+      <component :is="Component" ref="transtionPageRef"></component>
     </transition>
   </router-view>
 </template>
@@ -12,10 +12,10 @@ export default {
   name: "App",
   setup() {
     const $store = useStore();
-    const transtionPage = ref(null);
+    const transtionPageRef = ref(null);
     const enterPageRef = ref(null);
     // 监听当前transition组件内的页面变化
-    watch(transtionPage, (enterPage, leavePage) => {
+    watch(transtionPageRef, (enterPage, leavePage) => {
       // 当离开的页面存在的时候，表示页面在切换了
       if (leavePage) {
         // 把当前正在进入的元素保存起来
@@ -31,7 +31,7 @@ export default {
     //使用页面过度效果 from store
     const _transtionPageType = computed(() => $store.state.transtionPageType);
     return {
-      transtionPage,
+      transtionPageRef,
       _transtionPageType,
       onPageLeaved
     };
