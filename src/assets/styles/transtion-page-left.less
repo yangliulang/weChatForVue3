@@ -47,23 +47,23 @@
   // transform: translateX(-100%);
   left: -100vw;
 }
+.slide-right-enter-active {
+  transition: all @enterPageTime @transtionPageEffect;
+}
 .slide-right-enter-to {
   // transform: translateX(-100%);
   left: 0vw;
 }
 
-.slide-right-enter-active {
-  transition: all @enterPageTime @transtionPageEffect;
+.slide-right-leave-from {
+  // transform: translateX(100%);
+  left: 0vw;
 }
 
 .slide-right-leave-active {
   transition: all @leavePageTime @transtionPageEffect;
 }
 
-.slide-right-leave-from {
-  // transform: translateX(100%);
-  left: 100vw;
-}
 .slide-right-leave-to {
   // transform: translateX(100%);
   left: 100vw;
