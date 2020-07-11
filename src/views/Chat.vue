@@ -2,6 +2,7 @@
   <div class="page chat">
     liaotian
     <button @click="goToWeChat">微信</button>
+    <button @click="goToMini">进入小程序</button>
   </div>
 </template>
 <script>
@@ -13,8 +14,12 @@ export default {
     function goToWeChat() {
       $router.push("/");
     }
+    function goToMini() {
+      $router.push("/mini/10203");
+    }
     return {
-      goToWeChat
+      goToWeChat,
+      goToMini
     };
   }
 };

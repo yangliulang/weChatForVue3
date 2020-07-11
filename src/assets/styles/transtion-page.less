@@ -16,7 +16,6 @@
 }
 
 .slide-left-enter-active {
-  //   z-index: 2;
   transition: all @enterPageTime @transtionPageEffect;
 }
 
@@ -40,7 +39,6 @@
 }
 
 .slide-right-enter-active {
-  //   z-index: 2;
   transition: all @enterPageTime @transtionPageEffect;
 }
 
@@ -50,4 +48,54 @@
 
 .slide-right-leave-to {
   transform: translateX(100%);
+}
+
+// fade 类型进入
+
+.fade-up-enter-active,
+.fade-up-leave-active {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.fade-up-enter-from {
+  opacity: 0.5;
+  transform: translateY(-100%) translateZ(-100px);
+}
+
+.fade-up-enter-active {
+  transition: all @enterPageTimeFade @transtionPageEffect;
+}
+
+.fade-up-leave-active {
+  // 当从上面出来时，退出的层级要保证比上面搞
+  z-index: 1;
+  transition: all @leavePageTimeFade @transtionPageEffect;
+}
+
+.fade-up-leave-to {
+  transform: translateY(100%);
+}
+// 从底部进入
+.fade-down-enter-active,
+.fade-down-leave-active {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.fade-down-enter-from {
+  transform: translateY(100%);
+}
+
+.fade-down-enter-active {
+  transition: all @enterPageTimeFade @transtionPageEffect;
+}
+
+.fade-down-leave-active {
+  transition: all @leavePageTimeFade @transtionPageEffect;
+}
+
+.fade-down-leave-to {
+  opacity: 0.5;
+  transform: translateY(-10%) translateZ(-100px);
 }

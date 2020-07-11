@@ -38,6 +38,15 @@ const routes = [
     component: () => import(/* webpackChunkName: "chat" */ "../views/Chat.vue")
   },
   {
+    path: "/mini/:miniid",
+    name: "Mini",
+    meta: {
+      transtionPageType: "fade"
+    },
+    component: () =>
+      import(/* webpackChunkName: "chat" */ "../views/AddressBook.vue")
+  },
+  {
     path: "/demo/",
     name: "Demo",
     component: () => import(/* webpackChunkName: "demo" */ "../views/Demo.vue")
