@@ -1,0 +1,23 @@
+// 从右侧向左侧过度进入
+.slide-left-enter-active,
+.slide-left-leave-active {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.slide-left-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-left-enter-active {
+  z-index: 2;
+  transition: all 1s ease-in;
+}
+
+.slide-left-leave-active {
+  transition: all 2s ease-in;
+}
+
+.slide-left-leave-to {
+  transform: translateX(-100%);
+}

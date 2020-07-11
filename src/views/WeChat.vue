@@ -11,7 +11,7 @@ export default {
   setup() {
     const $router = useRouter();
     function gotoLiaoTian() {
-      $router.push("/chat");
+      $router.push("/chat/10001");
     }
     return {
       gotoLiaoTian
