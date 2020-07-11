@@ -1,8 +1,14 @@
 import Vuex from "vuex";
 
 export default Vuex.createStore({
-  state: {},
-  mutations: {},
+  state: {
+    transtionPageType: "slide-left"
+  },
+  mutations: {
+    setTranstionPageType(state, payload) {
+      state.transtionPageType = payload;
+    }
+  },
   actions: {},
   modules: {}
 });

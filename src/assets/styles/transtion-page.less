@@ -1,3 +1,9 @@
+// 页面进入时的保持样式 如果进入页面比退出页面稍快，要等退出岩棉完全退出前保持住当前样式
+.page-tranistioning {
+  position: absolute;
+  width: 100vw;
+}
+
 // 从右侧向左侧过度进入
 .slide-left-enter-active,
 .slide-left-leave-active {
@@ -10,14 +16,38 @@
 }
 
 .slide-left-enter-active {
-  z-index: 2;
-  transition: all 1s ease-in;
+  //   z-index: 2;
+  transition: all @enterPageTime @transtionPageEffect;
 }
 
 .slide-left-leave-active {
-  transition: all 2s ease-in;
+  transition: all @leavePageTime @transtionPageEffect;
 }
 
 .slide-left-leave-to {
   transform: translateX(-100%);
+}
+
+// 从左向右过低进入
+.slide-right-enter-active,
+.slide-right-leave-active {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.slide-right-enter-from {
+  transform: translateX(-100%);
+}
+
+.slide-right-enter-active {
+  //   z-index: 2;
+  transition: all @enterPageTime @transtionPageEffect;
+}
+
+.slide-right-leave-active {
+  transition: all @leavePageTime @transtionPageEffect;
+}
+
+.slide-right-leave-to {
+  transform: translateX(100%);
 }
