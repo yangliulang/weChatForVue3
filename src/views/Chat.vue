@@ -1,14 +1,16 @@
 <template>
   <div class="page chat">
-    liaotian
-    <button @click="goToWeChat">微信</button>
+    <NavHeadBar title="马建增" :on-back="goToWeChat" />
+
     <button @click="goToMini">进入小程序</button>
   </div>
 </template>
 <script>
 import { useRouter } from "vue-router";
+import NavHeadBar from "../components/public/NavHeadBar";
 export default {
   name: "Chat",
+  components: { NavHeadBar },
   setup() {
     const $router = useRouter();
     function goToWeChat() {

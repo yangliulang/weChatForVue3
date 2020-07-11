@@ -54,6 +54,7 @@ export default {
   top: 0;
   height: 150px;
   background-color: @navHeadBarBgColor;
+  border-bottom: 0.5px solid @borderColor; /*no*/
   .flex(space-between, stretch);
   .nav-head-left,
   .nav-head-right {
