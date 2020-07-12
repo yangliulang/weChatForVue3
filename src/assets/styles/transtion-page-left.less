@@ -14,26 +14,56 @@
 .slide-left-enter-from {
   // transform: translateX(100%);
   left: 100vw;
+  margin-top: @navHeadBarHeght;
+  .nav-head-bar {
+    opacity: 0;
+  }
 }
 .slide-left-enter-active {
-  transition: all @enterPageTime @transtionPageEffect;
+  transition: left @enterPageTime @transtionPageEffect;
+  .nav-head-bar {
+    transition: opacity @enterPageTime @transtionPageEffect;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
 }
 .slide-left-enter-to {
   left: 0vw;
+  margin-top: @navHeadBarHeght;
+  .nav-head-bar {
+    opacity: 1;
+  }
 }
 
 .slide-left-leave-from {
   // transform: translateX(-100%);
   left: 0vw;
+  margin-top: @navHeadBarHeght;
+  .nav-head-bar {
+    opacity: 1;
+  }
 }
 
 .slide-left-leave-active {
-  transition: all @leavePageTime @transtionPageEffect;
+  transition: left @leavePageTime @transtionPageEffect;
+  .nav-head-bar {
+    transition: opacity @leavePageTime @transtionPageEffect;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
 }
 
 .slide-left-leave-to {
   // transform: translateX(-100%);
   left: -100vw;
+  margin-top: @navHeadBarHeght;
+  .nav-head-bar {
+    opacity: 0;
+  }
 }
 
 // 从左向右过低进入
@@ -46,27 +76,57 @@
 .slide-right-enter-from {
   // transform: translateX(-100%);
   left: -100vw;
+  margin-top: @navHeadBarHeght;
+  .nav-head-bar {
+    opacity: 0;
+  }
 }
 .slide-right-enter-active {
-  transition: all @enterPageTime @transtionPageEffect;
+  transition: left @enterPageTime @transtionPageEffect;
+  .nav-head-bar {
+    transition: opacity @leavePageTime @transtionPageEffect;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
 }
 .slide-right-enter-to {
   // transform: translateX(-100%);
   left: 0vw;
+  margin-top: @navHeadBarHeght;
+  .nav-head-bar {
+    opacity: 1;
+  }
 }
 
 .slide-right-leave-from {
   // transform: translateX(100%);
   left: 0vw;
+  margin-top: @navHeadBarHeght;
+  .nav-head-bar {
+    opacity: 1;
+  }
 }
 
 .slide-right-leave-active {
-  transition: all @leavePageTime @transtionPageEffect;
+  transition: left @leavePageTime @transtionPageEffect;
+  .nav-head-bar {
+    transition: opacity @leavePageTime @transtionPageEffect;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
 }
 
 .slide-right-leave-to {
   // transform: translateX(100%);
   left: 100vw;
+  margin-top: @navHeadBarHeght;
+  .nav-head-bar {
+    opacity: 0;
+  }
 }
 
 // fade 类型进入

@@ -37,14 +37,6 @@ export default {
     return {
       isRightBySlot
     };
-    // console.log(rightBySlot);
-    // const $this = getCurrentInstance();
-    // const onBackHandler = () => {
-    //   props.onBack && props.onBack();
-    // };
-    // return {
-    // };
-    // console.log("$this", $this.ctx.$props);
   }
 };
 </script>
@@ -53,6 +45,7 @@ export default {
   position: sticky;
   top: 0;
   height: 150px;
+  box-sizing: border-box;
   background-color: @navHeadBarBgColor;
   border-bottom: 0.5px solid @borderColor; /*no*/
   .flex(space-between, stretch);

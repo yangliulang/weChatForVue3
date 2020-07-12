@@ -14,6 +14,8 @@ export default {
     const $store = useStore();
     const transtionPageRef = ref(null);
     const enterPageRef = ref(null);
+    //使用页面过度效果 from store
+    const _transtionPageType = computed(() => $store.state.transtionPageType);
     // 监听当前transition组件内的页面变化
     watch(transtionPageRef, (enterPage, leavePage) => {
       // 当离开的页面存在的时候，表示页面在切换了
@@ -24,12 +26,12 @@ export default {
         enterPage.$el.classList.add("page-tranistioning");
       }
     });
+
     // 当退出元素的动画结束，移除进入元素的保持样式
     const onPageLeaved = () => {
       enterPageRef.value.$el.classList.remove("page-tranistioning");
     };
-    //使用页面过度效果 from store
-    const _transtionPageType = computed(() => $store.state.transtionPageType);
+
     return {
       transtionPageRef,
       _transtionPageType,

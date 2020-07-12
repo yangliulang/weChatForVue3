@@ -3,7 +3,6 @@
     <!-- 这里需要注意@绑定的事件 在组件内部无法通过$listeners 获取了 -->
     <NavHeadBar
       title="微信(90)"
-      :on-back="onBack"
       :on-forward="onForward"
       forword-icon="wx-icon-jiahao"
     >
@@ -29,15 +28,13 @@ export default {
     function gotoLiaoTian() {
       $router.push("/chat/10001");
     }
-    function onBack() {
-      alert(10);
-    }
+
     function onForward() {
       alert(10);
     }
     return {
       gotoLiaoTian,
-      onBack,
+
       onForward
     };
   }
@@ -45,7 +42,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .wechat-page {
-  min-height: calc(100vh - @navToolBarHeight - @navToolBarPaddingBottom);
+  min-height: calc(100vh - @navToolBarHeight - @navToolBarPaddingBottom - 1px);
   background-color: #fff;
 }
 </style>
