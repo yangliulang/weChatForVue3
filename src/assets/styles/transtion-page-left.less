@@ -17,6 +17,9 @@
   margin-top: @navHeadBarHeght;
   .nav-head-bar {
     opacity: 0;
+    .nav-head-title {
+      text-indent: 200%;
+    }
   }
 }
 .slide-left-enter-active {
@@ -27,6 +30,9 @@
     left: 0;
     right: 0;
     top: 0;
+    .nav-head-title {
+      transition: text-indent @enterPageTime @transtionPageEffect;
+    }
   }
 }
 .slide-left-enter-to {
@@ -34,6 +40,9 @@
   margin-top: @navHeadBarHeght;
   .nav-head-bar {
     opacity: 1;
+    .nav-head-title {
+      text-indent: 0%;
+    }
   }
 }
 

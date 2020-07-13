@@ -1,6 +1,11 @@
 <template>
   <div class="page chat">
-    <NavHeadBar title="马建增" :on-back="goToWeChat" />
+    <NavHeadBar
+      title="一只帅蚂蚁"
+      :on-back="goToWeChat"
+      :on-forword="onForword"
+      forword-icon="wx-icon-pengyouquan"
+    />
 
     <button @click="goToMini">进入小程序</button>
   </div>
@@ -19,9 +24,13 @@ export default {
     function goToMini() {
       $router.push("/mini/10203");
     }
+    function onForword() {
+      $router.push("/mini/10203");
+    }
     return {
       goToWeChat,
-      goToMini
+      goToMini,
+      onForword
     };
   }
 };

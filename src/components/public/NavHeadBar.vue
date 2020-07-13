@@ -60,6 +60,8 @@ export default {
     }
   }
   .nav-head-title {
+    overflow: hidden;
+    word-break: keep-all;
     text-align: center;
     width: 70%;
     flex-shrink: 0;
