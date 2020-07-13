@@ -4,12 +4,12 @@
     <NavHeadBar
       title="微信(90)"
       :on-forward="onForward"
-      forword-icon="wx-icon-jiahao"
+      forword-icon="wx-icon-shezhi"
     >
       <!-- 在模板上使用v-slot -->
-      <template v-slot:right>
+      <!-- <template v-slot:right>
         <div>custom</div>
-      </template>
+      </template> -->
     </NavHeadBar>
 
     <button @click="gotoLiaoTian">聊天</button>
