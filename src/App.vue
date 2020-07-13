@@ -39,10 +39,6 @@ export default {
     };
     // 当退出元素的动画结束，移除进入元素的保持样式
     const onPageEnter = () => {
-      console.log(
-        "_transtionPageType",
-        _transtionPageType.value.startsWith("fade")
-      );
       // 如果压面过度动画是fade+slide
       // 我们需要给#app增加一个景深属性
       if (_transtionPageType.value.startsWith("fade")) {
