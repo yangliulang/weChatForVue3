@@ -93,7 +93,7 @@
 .slide-right-enter-active {
   transition: left @enterPageTime @transtionPageEffect;
   .nav-head-bar {
-    transition: opacity @leavePageTime @transtionPageEffect;
+    transition: opacity @enterPageTime @transtionPageEffect;
     position: fixed;
     left: 0;
     right: 0;
@@ -115,6 +115,9 @@
   margin-top: @navHeadBarHeght;
   .nav-head-bar {
     opacity: 1;
+    .nav-head-title {
+      text-indent: 0%;
+    }
   }
 }
 
@@ -122,6 +125,9 @@
   transition: left @leavePageTime @transtionPageEffect;
   .nav-head-bar {
     transition: opacity @leavePageTime @transtionPageEffect;
+    .nav-head-title {
+      transition: text-indent @leavePageTime @transtionPageEffect;
+    }
     position: fixed;
     left: 0;
     right: 0;
@@ -135,6 +141,9 @@
   margin-top: @navHeadBarHeght;
   .nav-head-bar {
     opacity: 0;
+    .nav-head-title {
+      text-indent: 600%;
+    }
   }
 }
 
@@ -159,14 +168,14 @@
   opacity: 1;
   transform: translateZ(0px) translateY(0px);
 }
-
-.fade-up-leave-from {
-  transform: translateY(0vh);
-}
 .fade-up-leave-active {
+  border-radius: 5px;
   // 当从上面出来时，退出的层级要保证比上面搞
   z-index: 1;
   transition: transform @leavePageTimeFade @transtionPageEffect;
+}
+.fade-up-leave-from {
+  transform: translateY(0vh);
 }
 
 .fade-up-leave-to {

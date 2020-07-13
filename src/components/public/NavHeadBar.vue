@@ -58,17 +58,49 @@ export default {
     &::before {
       font-size: 70px;
     }
+    // 增加右侧渐变覆盖样式
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -100%;
+      height: 100%;
+      width: 100%;
+      // background-color: red;
+      background-image: linear-gradient(
+        to left,
+        transparent,
+        @navHeadBarBgColor
+      );
+    }
   }
-  .nav-head-title {
-    overflow: hidden;
-    word-break: keep-all;
-    text-align: center;
-    width: 70%;
-    flex-shrink: 0;
-    .flex(center, center);
-    color: @fontWeightColor;
-    font-weight: bold;
-    font-size: @fontSizeBig;
+  .nav-head-right {
+    // 增加右侧渐变覆盖样式
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: -100%;
+      height: 100%;
+      width: 100%;
+      // background-color: red;
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        @navHeadBarBgColor
+      );
+    }
   }
+}
+.nav-head-title {
+  overflow: hidden;
+  word-break: keep-all;
+  text-align: center;
+  width: 70%;
+  flex-shrink: 0;
+  .flex(center, center);
+  color: @fontWeightColor;
+  font-weight: bold;
+  font-size: @fontSizeBig;
 }
 </style>
