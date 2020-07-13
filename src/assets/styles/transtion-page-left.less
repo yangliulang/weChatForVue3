@@ -148,21 +148,29 @@
 }
 .fade-up-enter-from {
   opacity: 0.5;
-  transform: translateY(-100%);
+  transform: translateZ(-50px) translateY(-50px);
 }
 
 .fade-up-enter-active {
-  transition: all @enterPageTimeFade @transtionPageEffect;
+  transition: transform @enterPageTimeFade @transtionPageEffect,
+    opacity @enterPageTimeFade @transtionPageEffect;
+}
+.fade-up-enter-to {
+  opacity: 1;
+  transform: translateZ(0px) translateY(0px);
 }
 
+.fade-up-leave-from {
+  transform: translateY(0vh);
+}
 .fade-up-leave-active {
   // 当从上面出来时，退出的层级要保证比上面搞
   z-index: 1;
-  transition: all @leavePageTimeFade @transtionPageEffect;
+  transition: transform @leavePageTimeFade @transtionPageEffect;
 }
 
 .fade-up-leave-to {
-  transform: translateY(100%);
+  transform: translateY(100vh);
 }
 // 从底部进入
 .fade-down-enter-active,
@@ -172,18 +180,27 @@
   height: 100vh;
 }
 .fade-down-enter-from {
-  transform: translateY(100%);
+  transform: translateY(100vh);
 }
 
 .fade-down-enter-active {
-  transition: all @enterPageTimeFade @transtionPageEffect;
+  transition: transform @enterPageTimeFade @transtionPageEffect;
 }
 
+.fade-down-enter-to {
+  transform: translateY(0vh);
+}
+
+.fade-down-leave-from {
+  opacity: 0.5;
+  transform: translateZ(0) translateY(0);
+}
 .fade-down-leave-active {
-  transition: all @leavePageTimeFade @transtionPageEffect;
+  transition: transform @leavePageTimeFade @transtionPageEffect,
+    opacity @leavePageTimeFade @transtionPageEffect;
 }
 
 .fade-down-leave-to {
   opacity: 0.5;
-  transform: translateY(-10%);
+  transform: translateZ(-50px) translateY(-50px);
 }

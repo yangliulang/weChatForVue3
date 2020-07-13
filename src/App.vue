@@ -1,6 +1,10 @@
 <template>
   <router-view v-slot="{ Component }">
-    <transition :name="_transtionPageType" @after-leave="onPageLeaved">
+    <transition
+      :name="_transtionPageType"
+      @after-leave="onPageLeaved"
+      @before-enter="onPageEnter"
+    >
       <component :is="Component" ref="transtionPageRef"></component>
     </transition>
   </router-view>
@@ -30,12 +34,27 @@ export default {
     // 当退出元素的动画结束，移除进入元素的保持样式
     const onPageLeaved = () => {
       enterPageRef.value.$el.classList.remove("page-tranistioning");
+      // 当退出完成后 移除景深#app
+      document.querySelector("#app").classList.remove("perspective");
+    };
+    // 当退出元素的动画结束，移除进入元素的保持样式
+    const onPageEnter = () => {
+      console.log(
+        "_transtionPageType",
+        _transtionPageType.value.startsWith("fade")
+      );
+      // 如果压面过度动画是fade+slide
+      // 我们需要给#app增加一个景深属性
+      if (_transtionPageType.value.startsWith("fade")) {
+        document.querySelector("#app").classList.add("perspective");
+      }
     };
 
     return {
       transtionPageRef,
       _transtionPageType,
-      onPageLeaved
+      onPageLeaved,
+      onPageEnter
     };
   }
 };
@@ -44,9 +63,12 @@ export default {
 html,
 body,
 #app {
-  // perspective: 800px;
   font-size: @fontSizeLarge;
   min-height: 100vh;
   background-color: @appBgColor;
+  &.perspective {
+    perspective: 800px;
+    background-color: #666;
+  }
 }
 </style>
