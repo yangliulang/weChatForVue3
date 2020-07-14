@@ -1,5 +1,5 @@
 <template>
-  <div class="page chat">
+  <div class="page chat-page">
     <NavHeadBar
       title="一只帅蚂蚁"
       :on-back="goToWeChat"
@@ -37,8 +37,8 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.page {
-  min-height: 100vh;
-  background-color: @appBgColor;
+.chat-page {
+  // min-height: 100vh;
+  background-color: #fff !important;
 }
 </style>
