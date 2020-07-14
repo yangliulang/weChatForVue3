@@ -42,7 +42,6 @@ export default {
 </script>
 <style lang="less" scoped>
 .wechat-page {
-  min-height: calc(100vh - @navToolBarHeight - @navToolBarPaddingBottom - 1px);
   background-color: #fff;
 }
 </style>

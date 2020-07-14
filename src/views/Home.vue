@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="page home-page">
     <router-view></router-view>
     <!-- 导航工具栏 -->
     <NavToolBar :navs="navs" />

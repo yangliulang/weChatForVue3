@@ -66,5 +66,10 @@ body,
     perspective: 800px;
     background-color: #666;
   }
+  // 给全局页面设置最小搞对
+  .page {
+    min-height: 100vh;
+    background-color: @appBgColor;
+  }
 }
 </style>

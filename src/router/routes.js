@@ -38,13 +38,13 @@ const routes = [
     component: () => import(/* webpackChunkName: "chat" */ "../views/Chat.vue")
   },
   {
-    path: "/mini/:miniid",
+    path: "/applet/:appletId",
     name: "Mini",
     meta: {
       transtionPageType: "fade"
     },
     component: () =>
-      import(/* webpackChunkName: "chat" */ "../views/AddressBook.vue")
+      import(/* webpackChunkName: "applet" */ "../views/Applet.vue")
   },
   {
     path: "/demo/",

@@ -3,7 +3,7 @@
     <NavHeadBar
       title="一只帅蚂蚁"
       :on-back="goToWeChat"
-      :on-forword="onForword"
+      :on-forward="onForword"
       forword-icon="wx-icon-pengyouquan"
     />
 
@@ -22,10 +22,11 @@ export default {
       $router.push("/");
     }
     function goToMini() {
-      $router.push("/mini/10203");
+      $router.push("/applet/10203");
     }
     function onForword() {
-      $router.push("/mini/10203");
+      alert(0);
+      $router.push("/applet/10203");
     }
     return {
       goToWeChat,
