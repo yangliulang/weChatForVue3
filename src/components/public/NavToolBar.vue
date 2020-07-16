@@ -60,7 +60,7 @@ export default {
       font-weight: bold;
       &::before {
         font-weight: normal;
-        font-size: 70px;
+        font-size: 45px;
       }
       &.actived {
         color: @green;

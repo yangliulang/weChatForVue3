@@ -44,7 +44,7 @@ export default {
 .nav-head-bar {
   position: sticky;
   top: 0;
-  height: 150px;
+  height: @navHeadBarHeght;
   box-sizing: border-box;
   background-color: @navHeadBarBgColor;
   border-bottom: 0.5px solid @borderColor; /*no*/
@@ -56,7 +56,7 @@ export default {
   }
   .nav-head-left {
     &::before {
-      font-size: 70px;
+      // font-size: 70px;
     }
     // 增加右侧渐变覆盖样式
     position: relative;
@@ -99,6 +99,6 @@ export default {
   .flex(center, center);
   color: @fontWeightColor;
   font-weight: bold;
-  font-size: @fontSizeBig;
+  font-size: @fontSizeMedium;
 }
 </style>
