@@ -7,7 +7,7 @@
       forword-icon="wx-icon-pengyouquan"
     />
 
-    <button @click="goToMini">进入小程序</button>
+    <p @click="goToMini">进入小程序</p>
   </div>
 </template>
 <script>

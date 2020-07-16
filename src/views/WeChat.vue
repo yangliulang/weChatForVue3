@@ -12,7 +12,7 @@
       </template> -->
     </NavHeadBar>
 
-    <button @click="gotoLiaoTian">聊天</button>
+    <p @click="gotoLiaoTian">聊天</p>
   </div>
 </template>
 <script>

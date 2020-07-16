@@ -59,7 +59,7 @@ export default {
 html,
 body,
 #app {
-  font-size: @fontSizeLarge;
+  font-size: @fontSizeMedium;
   min-height: 100vh;
   background-color: @appBgColor;
   &.perspective {
