@@ -6,17 +6,15 @@
       :on-forward="onForward"
       forword-icon="wx-icon-shezhi"
     >
-      <!-- 在模板上使用v-slot -->
-      <!-- <template v-slot:right>
-        <div>custom</div>
-      </template> -->
     </NavHeadBar>
 
     <p @click="gotoLiaoTian">聊天</p>
   </div>
 </template>
 <script>
+// 使用路由
 import { useRouter } from "vue-router";
+// 页头的导航组件
 import NavHeadBar from "../components/public/NavHeadBar";
 export default {
   name: "WeChatPage",
@@ -42,6 +40,6 @@ export default {
 </script>
 <style lang="less" scoped>
 .wechat-page {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 </style>

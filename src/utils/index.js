@@ -1,3 +1,4 @@
+// 根据路由跳转的meta提供的transtionPageType获取页面转场时的动画
 export const getTranstionPageTypeByRoutePath = function getTranstionPageTypeByRoutePath(
   to,
   from
