@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "./routes";
 import configRouter from "./config";
 console.log(process.env);
 const router = createRouter({
-  history: createWebHistory(
+  history: createWebHashHistory(
     "https://yangliulang.github.io/weChatForVue3/dist/"
   ),
   routes
