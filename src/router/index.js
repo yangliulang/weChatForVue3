@@ -3,9 +3,7 @@ import routes from "./routes";
 import configRouter from "./config";
 console.log(process.env);
 const router = createRouter({
-  history: createWebHashHistory(
-    "https://yangliulang.github.io/weChatForVue3/dist/"
-  ),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 });
 // 对router就行配置鉴权等
