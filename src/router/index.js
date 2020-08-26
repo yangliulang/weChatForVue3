@@ -2,7 +2,9 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "./routes";
 import configRouter from "./config";
 const router = createRouter({
-  history: createWebHashHistory("/"),
+  history: createWebHashHistory(
+    process.env.NODE_ENV === "production" ? "/weChatForVue3/dist/" : "/"
+  ),
   routes
 });
 // 对router就行配置鉴权等
