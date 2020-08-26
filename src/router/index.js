@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "./routes";
 import configRouter from "./config";
 const router = createRouter({
-  history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
 });
 // 对router就行配置鉴权等
