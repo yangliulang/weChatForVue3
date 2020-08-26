@@ -5,7 +5,10 @@ const postcss = px2rem({
   remUnit: 37.5
 });
 module.exports = {
-  publicPath: "https://yangliulang.github.io/weChatForVue3/dist/",
+  publicPath:
+    process.env.NODE_ENV === "production"
+      ? "https://yangliulang.github.io/weChatForVue3/dist/"
+      : "/",
   css: {
     loaderOptions: {
       postcss: {

@@ -7,7 +7,7 @@
       forword-icon="wx-icon-pengyouquan"
     />
 
-    <p @click="goToMini">进入小程序</p>
+    <p @click="goToMini" class="chat-item">进入小程序</p>
   </div>
 </template>
 <script>
@@ -39,6 +39,18 @@ export default {
 <style lang="less" scoped>
 .chat-page {
   // min-height: 100vh;
-  background-color: #fff !important;
+  background-color: gainsboro !important;
+  .chat-item {
+    height: 10vh;
+    background-color: forestgreen;
+    display: flex;
+    padding: 0 10vw;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    &::after {
+      content: ">";
+    }
+  }
 }
 </style>

@@ -8,7 +8,8 @@
     >
     </NavHeadBar>
 
-    <p @click="gotoLiaoTian">聊天</p>
+    <p @click="gotoLiaoTian" class="chat-item">和我聊一聊吧</p>
+    {{ state.env }}
   </div>
 </template>
 <script>
@@ -16,6 +17,7 @@
 import { useRouter } from "vue-router";
 // 页头的导航组件
 import NavHeadBar from "../components/public/NavHeadBar";
+import { reactive } from "vue";
 export default {
   name: "WeChatPage",
   components: {
@@ -23,6 +25,9 @@ export default {
   },
   setup() {
     const $router = useRouter();
+    const state = reactive({
+      env: process.env.BASE_URL
+    });
     function gotoLiaoTian() {
       $router.push("/chat/10001");
     }
@@ -32,8 +37,8 @@ export default {
     }
     return {
       gotoLiaoTian,
-
-      onForward
+      onForward,
+      state
     };
   }
 };
@@ -41,5 +46,17 @@ export default {
 <style lang="less" scoped>
 .wechat-page {
   background-color: #fff !important;
+  .chat-item {
+    height: 10vh;
+    background-color: tan;
+    display: flex;
+    padding: 0 10vw;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    &::after {
+      content: ">";
+    }
+  }
 }
 </style>
