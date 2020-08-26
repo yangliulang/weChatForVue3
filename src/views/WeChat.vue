@@ -9,7 +9,6 @@
     </NavHeadBar>
 
     <p @click="gotoLiaoTian" class="chat-item">和我聊一聊吧</p>
-    {{ state.env }}
   </div>
 </template>
 <script>
